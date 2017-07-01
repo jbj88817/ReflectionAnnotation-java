@@ -5,8 +5,12 @@ package us.bojie.reflection;
  */
 public class User {
 
+    @BindView(name = "Bojie", age = 28)
     private String name;
     public int age;
+
+    public User() {
+    }
 
     public User(String name, int age) {
         this.name = name;
@@ -31,5 +35,10 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "name " + name + " age " + age;
     }
 }
